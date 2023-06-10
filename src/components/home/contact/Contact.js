@@ -7,6 +7,7 @@ import { fetchSocials } from "../../../redux/actions/socials";
 
 import "../../_common/common.css"
 import "./contact.css"
+import Navbar from '../Navbar';
 
 class Contact extends Component {
 
@@ -40,7 +41,7 @@ class Contact extends Component {
                 <div className="contact-social-group">
                     { filteredSocials.map( social => <ContactItem key={social.name} icon={social.icon} text={social.text} url={social.url} />) }
                 </div>
-            </div>
+            </div>            
         );
     }
 }

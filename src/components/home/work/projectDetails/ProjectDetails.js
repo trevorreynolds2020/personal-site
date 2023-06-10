@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import "./projectDetails.css";
 
 import ReactGA from 'react-ga';
+import projects from '../../../../api/projects';
 
 class ProjectDetails extends Component {
 
@@ -31,14 +32,21 @@ class ProjectDetails extends Component {
         this.props.history.push("");
 
         const logPageView = () => {
-            ReactGA.set({ page: window.location.pathname + window.location.search });
+            ReactGA.set({ page:
+                
+                window.location.pathname + window.location.search });
             ReactGA.pageview(window.location.pathname + window.location.search);
         }
         logPageView();
     }
 
     render () {
-        const projectId = this.props.location.pathname.substring(1);
+        const projectId = this.props.location.pathname.substring(1).split("/")[1];
+      
+        // console.log(projectId)
+        // console.log("project details")
+        // console.log(projectId)
+        // console.log(projects)
         const project = this.props.projects.find( project => project.id === projectId);
 
         return (

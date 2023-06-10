@@ -14,6 +14,8 @@ class WorkContainer extends Component {
 
     render () {
         const { location } = this.props;
+
+        // console.log(location)
         
         const key = location.pathname.substring(1);
 
@@ -21,8 +23,8 @@ class WorkContainer extends Component {
             <TransitionGroup className="work">
                 <CSSTransition  key={key} classNames='route-fade' timeout={600} >
                     <Switch location={location} >             
-                        <Route path={"/:projectId"} exact component={ProjectDetails} />  
-                        <Route path={"/"}  component={Work} />
+                        <Route path={"/code/:projectId"} exact component={ProjectDetails} />  
+                        <Route path={"/"} component={Work} />
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>

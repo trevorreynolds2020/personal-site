@@ -25,7 +25,7 @@ class Work extends Component {
     }
 
     onProjectClick = projectId => {
-        this.props.history.push(projectId)
+        this.props.history.push(projectId) // add code here
     }
 
     _addRemoveLabel = (label, activeLabels) => {

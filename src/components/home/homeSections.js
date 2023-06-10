@@ -4,16 +4,16 @@ import Contact from "./contact/Contact";
 
 const SECTIONS = [
     {
-        name: "about",
-        component: About
+        name: "",
+        // component: About
     },
     {
-        name: "projects",
+        name: "code",
         component: WorkContainer
     },
     {
-        name: "contact",
-        component: Contact
+        name: "audio",
+        // component: Contact
     }
 ]   
 
